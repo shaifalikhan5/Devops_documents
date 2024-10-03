@@ -5,7 +5,8 @@
 **2.** 
  **connect to machine and install kubectl using below command.**
 ~~~
-curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.31.0/2024-09-12/bin/linux/amd64/kubectl
+
 
 chmod +x ./kubectl
 
@@ -16,6 +17,7 @@ kubectl version --client
 **3.** **install AWS CLi latest Version using below command.**
 
 ~~~
+sudo apt install unzip -y
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install
